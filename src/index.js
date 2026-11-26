@@ -1,7 +1,4 @@
 import "./styles.css";
+import { Meteorology } from "./meteorology.js";
 
-function test() {
-console.log(1);
-}
-
-test();
+Meteorology.getMeteorologicalData("Rio de Janeiro");

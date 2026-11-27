@@ -1,4 +1,10 @@
 import "./styles.css";
 import { Meteorology } from "./meteorology.js";
 
-Meteorology.getMeteorologicalData("Rio de Janeiro");
+let meteoData = Meteorology.getMeteorologicalData("Rio de Janeiro");
+let usefulMeteorologicalData = null;
+
+meteoData.then((response) => {
+  usefulMeteorologicalData = Meteorology.getUsefulMeteorologicalData(response);
+  console.log(usefulMeteorologicalData);
+});
